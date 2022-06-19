@@ -17,6 +17,7 @@ public class UserController {
     public List<User> getAll(){
         return userService.getAll();
     }
+
     @PostMapping("/store")
     public void addUser(@RequestBody User user){
         userService.addUser(user);

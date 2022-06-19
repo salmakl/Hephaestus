@@ -2,9 +2,12 @@ package com.youcode.hephaestus.entities;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("devices")
+import java.util.List;
+
+@Document("users")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,6 +20,11 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+
+    @DBRef
+    private List<LogoDesign> logoDesign;
+
+    private List<Role> role;
 
 
 }
