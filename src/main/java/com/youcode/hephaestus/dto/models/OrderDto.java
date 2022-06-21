@@ -1,25 +1,19 @@
 package com.youcode.hephaestus.dto.models;
 
 import com.youcode.hephaestus.entities.LogoDesign;
-import com.youcode.hephaestus.enums.ERole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-import java.util.List;
-
+@AllArgsConstructor
 @NoArgsConstructor
 @Data
-@AllArgsConstructor
-public class UserDto {
-
+public class OrderDto {
     private String id;
+    private LogoDesign logoDesign;
+    private String address;
     private String firstName;
     private String lastName;
-    private String email;
-    private String password;
-    private List<LogoDesign> logoDesign;
-    private ERole role;
+    private String companyName;
+    private String status;
 }
-

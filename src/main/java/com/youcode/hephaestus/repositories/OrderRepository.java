@@ -1,9 +1,12 @@
 package com.youcode.hephaestus.repositories;
 
-import com.youcode.hephaestus.entities.LogoDesign;
+import com.youcode.hephaestus.entities.Orders;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LogoDesignRepository extends MongoRepository<LogoDesign, String> {
+public interface OrderRepository extends MongoRepository<Orders, String> {
+
+    int countByStatus(String pending);
 }
+

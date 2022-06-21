@@ -69,4 +69,10 @@ public class LogoDesignService {
         }
         return fileName;
     }
+    public LogoDesign getLogoDesignById(String id){
+        return logoDesignRepository.findById(id).get();
+    }
+
+
+
 }

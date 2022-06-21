@@ -5,7 +5,9 @@ import com.youcode.hephaestus.enums.DNA;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -36,11 +38,11 @@ public class LogoDesign {
     @DBRef
     private User user;
 
-    @CreationTimestamp
+    @CreatedDate
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDateTime createdDate;
 
-    @UpdateTimestamp
+    @LastModifiedDate
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDateTime lastUpdate;
 

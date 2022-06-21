@@ -1,5 +1,6 @@
 package com.youcode.hephaestus.controllers;
 
+import com.youcode.hephaestus.dto.models.UserDto;
 import com.youcode.hephaestus.entities.User;
 import com.youcode.hephaestus.services.UserService;
 import lombok.AllArgsConstructor;
@@ -16,7 +17,8 @@ public class UserController {
     private final PasswordEncoder passwordEncoder;
 
     @GetMapping
-    public List<User> getAll(){
+    @CrossOrigin
+    public List<UserDto> getAll(){
         return userService.getAll();
     }
 

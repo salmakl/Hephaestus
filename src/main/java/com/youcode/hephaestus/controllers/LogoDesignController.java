@@ -22,7 +22,7 @@ public class LogoDesignController {
         return logoDesignService.getAll();
     }
 
-    @PostMapping("store")
+    @PostMapping("/store")
     public void add(@RequestParam Map<String,String> logoDesign,@RequestParam List<Integer> logoIds,@RequestParam List<DNA> dna, @RequestParam("lastLogo") MultipartFile lastLogo, @RequestParam("imageCompetitor") MultipartFile imageCompetitor, @RequestParam("uploadMore") MultipartFile more){
         logoDesignService.add(logoDesign,logoIds,dna,lastLogo,imageCompetitor,more);
     }

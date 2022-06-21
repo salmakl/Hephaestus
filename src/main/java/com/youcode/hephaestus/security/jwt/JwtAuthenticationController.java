@@ -29,7 +29,8 @@ public class JwtAuthenticationController {
     private UserDetailsService jwtInMemoryUserDetailsService;
 
 
-    @PostMapping("/authenticate")
+    @PostMapping("/api/authenticate")
+    @CrossOrigin
     public ResponseEntity<?> generateAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
             throws Exception {
 
